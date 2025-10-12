@@ -73,7 +73,7 @@ const loaderFill = document.querySelector(".loader-fill");
 const loaderPercentage = document.querySelector(".loader-percentage");
 
 let progress = 0;
-const loadingDuration = 3000; // 3 seconds
+const loadingDuration = 0; // 0 second for test it
 const updateInterval = 50; // Update every 50ms
 
 function updateLoader() {
@@ -116,3 +116,151 @@ setTimeout(() => {
     document.body.style.overflow = "auto";
   }
 }, loadingDuration + 2000);
+
+// ScrollReveal Animations
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2000,
+  delay: 100,
+  reset: false
+});
+
+// Hero Section Animations
+sr.reveal('.hero-tagline', {
+  delay: 200,
+  origin: 'top',
+  distance: '30px'
+});
+
+sr.reveal('.hero-title', {
+  delay: 400,
+  origin: 'top',
+  distance: '50px'
+});
+
+sr.reveal('.hero-description', {
+  delay: 600,
+  origin: 'left',
+  distance: '40px'
+});
+
+sr.reveal('.hero-actions', {
+  delay: 800,
+  origin: 'bottom',
+  distance: '40px'
+});
+
+// Lodging Cards Animation
+sr.reveal('.lodging-card', {
+  delay: 200,
+  origin: 'bottom',
+  interval: 200
+});
+
+// About Section Animations
+sr.reveal('.about-header-title', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.about-header-description', {
+  delay: 400,
+  origin: 'right'
+});
+
+sr.reveal('.about-section', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.about-categories', {
+  delay: 400,
+  origin: 'bottom'
+});
+
+sr.reveal('.about-image-placeholder', {
+  delay: 600,
+  origin: 'right'
+});
+
+// Testimonials Animation
+sr.reveal('.testimonials-title', {
+  delay: 200,
+  origin: 'top'
+});
+
+sr.reveal('.testimonial-card', {
+  delay: 200,
+  origin: 'bottom',
+  interval: 150
+});
+
+// Statistics Section Animation
+sr.reveal('.statistics-title', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.statistics-content-details', {
+  delay: 400,
+  origin: 'left'
+});
+
+sr.reveal('.statistics-card', {
+  delay: 600,
+  origin: 'right'
+});
+
+// Video Section Animation
+sr.reveal('.video-title', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.video-description', {
+  delay: 400,
+  origin: 'right'
+});
+
+sr.reveal('.video-placeholder', {
+  delay: 600,
+  origin: 'bottom'
+});
+
+sr.reveal('.video-stats', {
+  delay: 800,
+  origin: 'right'
+});
+
+// Subscription Section Animation
+sr.reveal('.subscription-title', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.subscription-description', {
+  delay: 400,
+  origin: 'right'
+});
+
+sr.reveal('.subscription-form', {
+  delay: 600,
+  origin: 'bottom'
+});
+
+// Footer Animation
+sr.reveal('.footer-brand', {
+  delay: 200,
+  origin: 'left'
+});
+
+sr.reveal('.nav-column', {
+  delay: 200,
+  origin: 'bottom',
+  interval: 100
+});
+
+sr.reveal('.footer-contact', {
+  delay: 400,
+  origin: 'right'
+});
