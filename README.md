@@ -2,6 +2,14 @@
 
 A modern, responsive landing page for a luxury real estate platform built with HTML, CSS, and JavaScript. This design is transferring this Figma UI design [@https://www.figma.com/design/o6N9UMOGrMPb11XZ0DFDXT/Iso?node-id=1-2&t=h7gsMVBMMhCMNCxP-1](https://www.figma.com/design/o6N9UMOGrMPb11XZ0DFDXT/Iso?node-id=1-2&t=h7gsMVBMMhCMNCxP-1) to code.
 
+## 📚 Documentation
+
+This project includes comprehensive documentation:
+
+- **[📖 Complete Documentation](DOCUMENTATION.md)** - Comprehensive guide covering all aspects of the project
+- **[🔧 Technical Specifications](TECHNICAL_SPECS.md)** - Detailed technical specifications and performance metrics
+- **[👨‍💻 Developer Guide](DEVELOPER_GUIDE.md)** - Developer-focused guide with code examples and best practices
+
 ## 🏠 About
 
 Iso is a luxury real estate platform that showcases architecturally refined properties for the discerning few. The website features a modern, minimalist design with smooth animations and a premium user experience.
