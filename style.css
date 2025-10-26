@@ -343,11 +343,25 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: #4c4c4c;
   position: relative;
   overflow: hidden;
 }
 
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
 .hero:before {
   content: "";
@@ -356,7 +370,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #ffffff00 0%, #ffffff00 80%, #000000 100%);
+  background: black;
+  opacity: 0.7;
+  z-index: 2;
 }
 
 .hero-container {
@@ -367,7 +383,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
 }
 
@@ -379,7 +395,6 @@ img {
 .hero-tagline {
   margin: 50px 0 30px;
 }
-
 
 @media (max-width: 1500px) {
   .hero-tagline {
@@ -422,7 +437,6 @@ img {
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
-
   margin-bottom: 50px;
 }
 
@@ -719,7 +733,7 @@ img {
 
 /* Lodging Section */
 .lodging {
-  padding: 0 0 6rem 0;
+  padding: 6rem 0;
   background: #000000;
 }
 
@@ -754,10 +768,23 @@ img {
   transform: translateY(0px);
 } */
 
-.card-image-placeholder {
+.card-image {
   height: 40%;
-  background: #C4C4C4;
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.lodging-card:hover .card-image img {
+  transform: scale(1.05);
 }
 
 .card-content {
@@ -1023,27 +1050,24 @@ img {
   align-items: center;
 }
 
-.about-image-placeholder {
+.about-image {
   width: 100%;
   height: 330px;
-  background: #C4C4C4;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
-.placeholder-content {
-  text-align: center;
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
 }
 
-.placeholder-text {
-  color: #666666;
-  font-size: 1.1rem;
-  font-weight: 400;
+.about-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Responsive Design for About */
@@ -1124,7 +1148,7 @@ img {
     font-size: 1rem;
   }
   
-  .about-image-placeholder {
+  .about-image {
     height: 300px;
   }
   
@@ -1186,7 +1210,7 @@ img {
     text-align: center;
   }
   
-  .about-image-placeholder {
+  .about-image {
     height: 250px;
   }
   
@@ -1226,7 +1250,7 @@ img {
     font-size: 0.85rem;
   }
   
-  .about-image-placeholder {
+  .about-image {
     height: 200px;
   }
   
@@ -1272,15 +1296,23 @@ img {
   min-height: 200px;
 }
 
-.testimonial-image-placeholder {
+.testimonial-image {
   width: 130px;
   height: 150px;
-  background: #D9D9D9;
   border-radius: 15px;
   flex-shrink: 0;
   position: relative;
   margin-left: -80px;
   z-index: 2;
+  overflow: hidden;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
 }
 
 .testimonial-content {
@@ -1351,7 +1383,7 @@ img {
     min-height: auto;
   }
   
-  .testimonial-image-placeholder {
+  .testimonial-image {
     width: 60px;
     height: 60px;
   }
@@ -1395,7 +1427,7 @@ img {
     gap: 1rem;
   }
   
-  .testimonial-image-placeholder {
+  .testimonial-image {
     width:80px;
     height: 80px;
     margin-left: 0px !important ;
@@ -1521,23 +1553,29 @@ img {
   margin-top: auto;
 }
 
-.statistics-image-placeholder {
+.statistics-image {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: auto;
   height: 100%;
   width: 420px;
-  /* height: 200px; */
-  background: #D9D9D9;
   border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   overflow: hidden;
+  position: relative;
+}
 
+.statistics-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.statistics-image:hover img {
+  transform: scale(1.05);
 }
 
 .statistics-right {
@@ -1593,7 +1631,7 @@ img {
     max-width: 500px;
   }
   
-  .statistics-image-placeholder {
+  .statistics-image {
     width: 100%;
     max-width: 400px;
   }
@@ -1629,7 +1667,7 @@ img {
     margin-top: 0;
   }
   
-  .statistics-image-placeholder {
+  .statistics-image {
     width: 100%;
     max-width: 100%;
     height: 300px;
@@ -1693,7 +1731,7 @@ img {
     gap: 1.5rem;
   }
   
-  .statistics-image-placeholder {
+  .statistics-image {
     width: 100%;
     height: 250px;
     margin-top: 0;
@@ -1754,7 +1792,7 @@ img {
     font-size: 0.9rem;
   }
   
-  .statistics-image-placeholder {
+  .statistics-image {
     height: 200px;
   }
   
@@ -1799,7 +1837,7 @@ img {
     font-size: 0.85rem;
   }
   
-  .statistics-image-placeholder {
+  .statistics-image {
     height: 180px;
   }
   
@@ -1870,10 +1908,9 @@ img {
   position: relative;
 }
 
-.video-placeholder {
+.video-background {
   width: 100%;
   height: 500px;
-  background: #D9D9D9;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1881,6 +1918,23 @@ img {
   justify-content: left;
   position: relative;
   overflow: hidden;
+}
+
+.video-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.video-background .play-button {
+  position: relative;
+  z-index: 2;
 }
 
 .play-button {
@@ -2007,7 +2061,7 @@ img {
     font-size: 0.95rem;
   }
   
-  .video-placeholder {
+  .video-background {
     height: 400px;
     padding: 2rem 0 0 3rem;
   }
@@ -2057,7 +2111,7 @@ img {
     max-width: 100%;
   }
   
-  .video-placeholder {
+  .video-background {
     height: 300px;
     padding: 2rem 0 0 2rem;
   }
@@ -2116,7 +2170,7 @@ img {
     font-size: 0.85rem;
   }
   
-  .video-placeholder {
+  .video-background {
     height: 250px;
     padding: 1.5rem 0 0 1.5rem;
   }
@@ -2167,7 +2221,7 @@ img {
     font-size: 0.8rem;
   }
   
-  .video-placeholder {
+  .video-background {
     height: 200px;
     padding: 1rem 0 0 1rem;
   }
